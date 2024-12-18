@@ -53,8 +53,8 @@ def trade_summary_with_fractional(
 
     # Display results
     print("=== Trading Information ===")
-    print(f"Coin Price per Unit:   ${coin_price:.2f}")
-    print(f"Investment Amount:     ${investment_amount:.2f}")
+    print(f"Coin Price per Unit:   ${coin_price:.6f}")
+    print(f"Investment Amount:     ${investment_amount:.6f}")
     # print(f"Fee Percentage (Per Trade): {fee_percent}%")
     print(f"Quantity Purchased:    {quantity:.6f}")
     print(f"Buying Fee:            ${buy_fee:.6f}")
@@ -64,7 +64,7 @@ def trade_summary_with_fractional(
 
     if current_coin_price:
         print("\n=== Current Price Analysis ===")
-        print(f"Current Coin Price: ${current_coin_price:.2f}")
+        print(f"Current Coin Price: ${current_coin_price:.6f}")
         print(f"Sell Value:         ${total_sell_value_at_current:.6f}")
         print(f"Net Profit/Loss:    ${profit_at_current:.6f}")
         print(f"Percentage:         {percentage_profit_loss:.2f}%")
@@ -85,13 +85,13 @@ def trade_summary(buy_price, quantity):
 
 def main():
     # Check the number of arguments
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 2:
         print("Usage: python trade_summary.py <coin_price> <investment_amount> [current_coin_price]")
         sys.exit(1)
 
     # Parse arguments
     coin_price = float(sys.argv[1])
-    investment_amount = float(sys.argv[2])
+    investment_amount = float(sys.argv[2]) if len(sys.argv) > 3 else 100
     current_coin_price = float(sys.argv[3]) if len(sys.argv) > 3 else None
 
     # Call the function
