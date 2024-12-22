@@ -91,7 +91,7 @@ def main():
 
     # Parse arguments
     coin_price = float(sys.argv[1])
-    investment_amount = float(sys.argv[2]) if len(sys.argv) > 3 else 100
+    investment_amount = float(sys.argv[2]) if len(sys.argv) > 2 else 100
     current_coin_price = float(sys.argv[3]) if len(sys.argv) > 3 else None
 
     # Call the function
