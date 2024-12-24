@@ -16,11 +16,16 @@ pip install -e .
 ## Available commands
 ```bash
 # for basic information
-trade <coin_price> <investment_amount> <current_coin_price>
+trade <coin_price> [<investment_amount>] [<current_coin_price>]
 
 # for detailed information
-traded <coin_price> <investment_amount> <current_coin_price>
+traded <coin_price> [<investment_amount>] [<current_coin_price>]
 ```
+
+Parameters:
+- <coin_price>: The price of the cryptocurrency at the time of purchase (in USD). (Required)
+- [<investment_amount>]: The total amount of money invested (in USD). (Optional, defaults to $100).
+- [<current_coin_price>]: The current price of the cryptocurrency (in USD). (Optional, defaults to None).
 
 ## Sample basic output
 ```bash
