@@ -1,5 +1,6 @@
 import sys
-from trade import trade_summary_with_fractional
+from trade.trade import trade_summary_with_fractional
+
 
 def main():
     # Check the number of arguments
@@ -19,6 +20,7 @@ def main():
         coin_price=coin_price,
         investment_amount=investment_amount,
         current_coin_price=current_coin_price,
+        fee_percent=0.25
     )
 
 

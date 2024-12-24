@@ -60,7 +60,9 @@ def trade_summary_with_fractional(
     print(f"Break:  ${break_even_price:.6f}\n")
 
     if current_coin_price:
-        print(f"{percentage_profit_loss:.2f}%: ${current_coin_price:.6f} (${profit_at_current:.6f})")
+        print(
+            f"{percentage_profit_loss:.2f}%: ${current_coin_price:.6f} (${profit_at_current:.6f})"
+        )
         # print(f"Sell Value:         ${total_sell_value_at_current:.6f}")
         # print(f"Net Profit/Loss:    ${profit_at_current:.6f}")
         # print(f"Percentage:         {percentage_profit_loss:.2f}%")
