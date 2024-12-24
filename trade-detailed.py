@@ -1,6 +1,3 @@
-import sys
-
-
 def trade_summary_with_fractional(
     coin_price, investment_amount, current_coin_price=None, fee_percent=0.25
 ):
@@ -52,24 +49,24 @@ def trade_summary_with_fractional(
         total_sell_value_at_current = None
 
     # Display results
-    # print("=== Trading Information ===")
-    print(f"Price:  ${coin_price:.6f}")
-    print(f"Paid:   ${investment_amount:.6f}")
+    print("=== Trading Information ===")
+    print(f"Coin Price per Unit:   ${coin_price:.6f}")
+    print(f"Investment Amount:     ${investment_amount:.6f}")
     # print(f"Fee Percentage (Per Trade): {fee_percent}%")
-    print(f"Qty:    {quantity:.6f}")
-    print(f"Fee:    ${buy_fee:.6f}")
-    print(f"Total:  ${actual_total_cost:.6f}")
-    print(f"Actual: ${actual_price_per_unit:.6f}")
-    print(f"Break:  ${break_even_price:.6f}")
+    print(f"Quantity Purchased:    {quantity:.6f}")
+    print(f"Buying Fee:            ${buy_fee:.6f}")
+    print(f"Total Cost with Fee:   ${actual_total_cost:.6f}")
+    print(f"Actual Price per Unit: ${actual_price_per_unit:.6f}")
+    print(f"Break-even Sell Price: ${break_even_price:.6f}")
 
     if current_coin_price:
-        print("")
+        print("\n=== Current Price Analysis ===")
         print(f"Current Coin Price: ${current_coin_price:.6f}")
         print(f"Sell Value:         ${total_sell_value_at_current:.6f}")
         print(f"Net Profit/Loss:    ${profit_at_current:.6f}")
         print(f"Percentage:         {percentage_profit_loss:.2f}%")
 
-    print("")
+    print("\n=== Target Prices and Profits ===")
     for gain, price in target_prices.items():
         print(f"For {gain}% Gain")
         print(f"Target Price: ${price:.6f}")
@@ -105,9 +102,9 @@ def main():
     trade_summary_with_fractional(
         coin_price=coin_price,
         investment_amount=investment_amount,
-        current_coin_price=current_coin_price
+        current_coin_price=current_coin_price,
     )
+
 
 if __name__ == "__main__":
     main()
-

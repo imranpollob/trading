@@ -86,7 +86,9 @@ def trade_summary(buy_price, quantity):
 def main():
     # Check the number of arguments
     if len(sys.argv) < 2:
-        print("Usage: python trade_summary.py <coin_price> <investment_amount> [current_coin_price]")
+        print(
+            "Usage: python trade_summary.py <coin_price> <investment_amount> [current_coin_price]"
+        )
         sys.exit(1)
 
     # Parse arguments
@@ -98,9 +100,9 @@ def main():
     trade_summary_with_fractional(
         coin_price=coin_price,
         investment_amount=investment_amount,
-        current_coin_price=current_coin_price
+        current_coin_price=current_coin_price,
     )
+
 
 if __name__ == "__main__":
     main()
-
