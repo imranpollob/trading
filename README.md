@@ -16,10 +16,10 @@ pip install -e .
 ## Available commands
 ```bash
 # for basic information
-trade <coin_price> [<investment_amount>] [<current_coin_price>]
+t <coin_price> [<investment_amount>] [<current_coin_price>]
 
 # for detailed information
-traded <coin_price> [<investment_amount>] [<current_coin_price>]
+trade <coin_price> [<investment_amount>] [<current_coin_price>]
 ```
 
 Parameters:
@@ -29,7 +29,7 @@ Parameters:
 
 ## Sample basic output
 ```bash
-# trade 116 200 118
+# t 116 200 118
 
 Price:  $116.000000
 Paid:   $200.000000
@@ -46,7 +46,7 @@ Break:  $116.581454
 
 ## Sample detailed output
 ```bash
-# traded 116 200 118
+# trade 116 200 118
 
 === Trading Information ===
 Coin Price per Unit:   $116.000000

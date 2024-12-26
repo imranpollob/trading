@@ -6,8 +6,8 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "trade=trade.trade_console:main",
-            "traded=trade.trade_detailed_console:main",
+            "t=trade.trade_console:main",
+            "trade=trade.trade_detailed_console:main",
         ],
     },
     install_requires=[],
