@@ -1,5 +1,5 @@
 def trade_summary_with_fractional(
-    coin_price, investment_amount, current_coin_price=None, fee_percent=0.25
+    coin_price, investment_amount, current_coin_price=None, fee_percent=0.20
 ):
     # Input validation
     if coin_price <= 0 or investment_amount <= 0 or fee_percent < 0:
