@@ -27,6 +27,17 @@ Parameters:
 
 **Note:** If one fee is given it will be used for both buy and sell.
 
+#### Storing custom fees
+If you want to store a new fee structure for the default buy and sell fee then you can use the following command.
+
+```bash
+t --set-fee
+
+# it will ask for input
+Enter the buy fee rate (%): <buy_fee_rate>
+Enter the sell fee rate (%): <sell_fee_rate>
+```
+
 ## Sample output
 ```bash
 # t 116
