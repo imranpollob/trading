@@ -1,5 +1,5 @@
 import sys
-from trade.trade import trade_summary_with_fractional
+from trade import trade_summary
 
 
 def main():
@@ -16,11 +16,12 @@ def main():
     current_coin_price = float(sys.argv[3]) if len(sys.argv) > 3 else None
 
     # Call the function
-    trade_summary_with_fractional(
+    trade_summary(
         coin_price=coin_price,
         investment_amount=investment_amount,
         current_coin_price=current_coin_price,
-        fee_percent=0.25
+        buy_fee_rate=0.0025,
+        sell_fee_rate=0.0025,
     )
 
 
