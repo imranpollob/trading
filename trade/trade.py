@@ -33,11 +33,11 @@ def trade_summary(
         net_profit_loss = sell_revenue - total_cost
         profit_loss_percentage = (net_profit_loss / total_cost) * 100
         print(
-            f"{profit_loss_percentage:.2f}%: ${default_format.format(current_coin_price)} (${net_profit_loss:.2f})"
+            f"{profit_loss_percentage:.2f}%: ${default_format.format(current_coin_price)} (${net_profit_loss:.2f})\n"
         )
 
     # Target prices and profit amounts for 1% to 5% profit
-    for i, profit in enumerate([0.01, 0.02, 0.03, 0.04, 0.05], 1):
+    for i, profit in enumerate([0.005, 0.01, 0.02, 0.03, 0.04, 0.05], 1):
         price = break_even_price * (1 + profit)
         profit_amount = (price - break_even_price) * num_coins * (1 - sell_fee_rate)
         print(
