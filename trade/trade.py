@@ -6,9 +6,13 @@ def trade_summary(
     sell_fee_rate=0.0025,
 ):
     default_format = "{:.4f}"
+    input_format = None
 
-    if "." in str(coin_price) and len(str(coin_price).split(".")[1]) > 4:
-        default_format = f"{{:.{input_format}f}}"
+    if "." in str(coin_price):
+        input_format = len(str(coin_price).split(".")[1])
+
+        if input_format > 4:
+            default_format = f"{{:.{input_format}f}}"
 
     # Calculate the number of coins bought
     num_coins = investment_amount / coin_price
