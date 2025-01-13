@@ -6,10 +6,8 @@ def trade_summary(
     sell_fee_rate=0.0025,
 ):
     default_format = "{:.4f}"
-    # if lenght of the coin_price after precision is more than 4, use the length of the input's precision
-    input_format = len(str(coin_price).split(".")[1])
 
-    if input_format > 4:
+    if "." in str(coin_price) and len(str(coin_price).split(".")[1]) > 4:
         default_format = f"{{:.{input_format}f}}"
 
     # Calculate the number of coins bought
